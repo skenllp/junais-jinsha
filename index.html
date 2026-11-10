@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Muhammed Junais &amp; Fathima Jinsha · Wedding Invitation</title>
+<meta name="description" content="Wedding ceremony of Muhammed Junais and Fathima Jinsha. Sunday, 29 November 2026, PPS Koohinoor Auditorium, Peruvallur.">
+<meta property="og:title" content="Muhammed Junais &amp; Fathima Jinsha · Wedding Invitation">
+<meta property="og:description" content="Sunday, 29 November 2026 · PPS Koohinoor Auditorium, Koomanna Rd, Kadabazar, Peruvallur.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://junais-jinsha.vercel.app/">
+<meta property="og:image" content="assets/cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Muhammed Junais &amp; Fathima Jinsha · Wedding Invitation">
+<meta name="twitter:description" content="Sunday, 29 November 2026 · PPS Koohinoor Auditorium, Koomanna Rd, Kadabazar, Peruvallur.">
+<meta name="twitter:image" content="assets/cover.jpg">
+<meta name="theme-color" content="#f5f1ea">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="assets/cover.jpg">
+<link rel="preload" as="image" href="assets/hero.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Monsieur+La+Doulaise&family=Pinyon+Script&family=Amiri&display=swap">
+<style>
+:root{--bg:#f5f1ea;--card:#efe8dc;--card2:#f8f4ed;--ink:#2e2a24;--soft:#625c52;--gold:#ab8644;--gold-text:#86662c;--gold2:#cdb384;--line:rgba(171,134,68,.4);
+  --body:"Cormorant Garamond","Iowan Old Style",Georgia,serif;--script:"Pinyon Script",cursive;color-scheme:light}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{height:100%}
+body{margin:0;background:#e9e3d8;color:var(--ink);font:400 18px/1.55 var(--body);-webkit-font-smoothing:antialiased}
+.wrap{max-width:480px;margin:0 auto;background:var(--bg);position:relative;overflow:hidden;min-height:100%}
+.pad{padding-left:max(26px,env(safe-area-inset-left,0px));padding-right:max(26px,env(safe-area-inset-right,0px))}
+.cap{font:600 11px/1.9 var(--body);letter-spacing:.26em;text-transform:uppercase;color:var(--soft)}
+.gcap{font:600 12.5px/1.5 var(--body);letter-spacing:.22em;text-transform:uppercase;color:var(--gold-text)}
+h2{font:500 30px/1.15 var(--body);margin:8px 0 0;text-wrap:balance}
+.sec{padding-block:54px;text-align:center;position:relative}
+.dia{display:flex;align-items:center;justify-content:center;gap:10px;margin:14px auto}
+.dia i{width:44px;height:1px;background:var(--line)}
+.dia b{width:6px;height:6px;border:1px solid var(--gold);transform:rotate(45deg)}
+.pill{display:inline-block;font:600 12px/1 var(--body);letter-spacing:.22em;text-transform:uppercase;color:#fff;background:var(--gold-text);border:0;border-radius:999px;padding:16px 26px;cursor:pointer;text-decoration:none}
+.link{font:600 12px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--gold-text);text-decoration:none}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,#cover:focus-visible{outline:2px solid var(--gold-text);outline-offset:3px}
+
+/* cover */
+#cover{position:fixed;inset:0;z-index:50;display:flex;justify-content:center;background:#e9e3d8;cursor:pointer;transition:opacity .9s ease,visibility 0s .9s}
+#cover.gone{opacity:0;visibility:hidden;pointer-events:none}
+.cv{position:relative;width:100%;max-width:480px;height:100%;overflow:hidden;background:url(assets/cover.jpg) center/cover no-repeat}
+.cv video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tap{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;font:600 11px/1 var(--body);letter-spacing:.3em;white-space:nowrap;color:#fff;background:rgba(60,55,48,.55);padding:13px 22px;border-radius:999px;transition:opacity .3s;animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.75}}
+.cvTop{position:absolute;top:max(40px,calc(env(safe-area-inset-top,0px) + 26px));left:0;right:0;text-align:center;z-index:2;transition:opacity .4s}
+.cvTop .bless{font:400 22px/1.4 "Amiri",serif;color:#5a5047;direction:rtl}
+#cover.playing .tap{opacity:0;animation:none}
+#cover.playing .cvTop{opacity:0}
+
+/* music toggle */
+.music-toggle{position:fixed;top:max(16px,calc(env(safe-area-inset-top,0px) + 12px));right:max(16px,calc(env(safe-area-inset-right,0px) + 12px));z-index:40;width:38px;height:38px;border-radius:50%;background:rgba(245,241,234,.85);border:1px solid var(--gold);color:var(--gold-text);display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 12px rgba(46,42,36,.12);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:opacity .6s ease,transform .2s ease}
+.music-toggle.visible{opacity:1;pointer-events:auto}
+.music-toggle:active{transform:scale(.92)}
+.music-toggle.playing svg{animation:spinMusic 4s linear infinite;transform-origin:center}
+.music-toggle.paused::after{content:'';position:absolute;width:22px;height:1.5px;background:var(--gold-text);transform:rotate(-45deg)}
+@keyframes spinMusic{100%{transform:rotate(360deg)}}
+@media (min-width:480px){.music-toggle{right:calc(50% - 240px + 16px)}}
+
+/* hero */
+.hero{position:relative;min-height:min(100svh,853px);background:#fbeee2 url(assets/hero.png) center/cover no-repeat;text-align:center;display:flex;flex-direction:column;justify-content:center;padding:max(64px,calc(env(safe-area-inset-top,0px) + 44px)) 44px 44px}
+.hero .in{opacity:0;transform:translateY(8px);transition:opacity 1.6s ease,transform 1.6s ease}
+.hero.show .in{opacity:1;transform:none}
+.hero .bless{font:400 24px/1.4 "Amiri",serif;color:var(--gold-text);direction:rtl;margin-bottom:8px}
+.hero .cap{letter-spacing:.2em;text-wrap:balance}
+.mono{position:relative;height:78px;margin:22px auto 6px;width:110px}
+.mono span{position:absolute;top:0;font:400 76px/1 var(--script);color:var(--gold);line-height:1}
+.mono span:first-child{left:10px}
+.mono span:last-child{right:10px;top:6px;color:var(--gold2);opacity:.92}
+.names{font:400 min(44px,11vw)/1.15 "Pinyon Script",cursive;color:var(--gold-text);white-space:nowrap}
+.names span,.names em{display:block}
+.names em{font:400 .6em/1.2 "Pinyon Script",cursive}
+.hdate{font:500 19px/1.25 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--gold-text);margin-top:6px}
+.hline{font:400 19px/1.4 var(--script);color:var(--soft);margin-top:14px;text-wrap:balance}
+.sprig{width:34px;height:52px;margin:20px auto 0;display:block;color:var(--gold)}
+.sdown{margin-top:24px}
+
+/* countdown + date */
+.count{display:flex;justify-content:center;gap:34px;margin-top:16px}
+.count b{display:block;font:500 34px/1 var(--body);color:var(--gold-text);font-variant-numeric:tabular-nums}
+.count span{font:400 12.5px/1 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+.dateBig{font:400 24px/1.2 var(--body);margin-top:10px}
+.time{color:var(--soft);font-size:16px;letter-spacing:.04em}
+.cal{max-width:300px;margin:24px auto 0;background:var(--card2);border:1px solid rgba(171,134,68,.22);border-radius:14px;padding:18px 16px}
+.cal .mo{font:400 20px/1 var(--body);letter-spacing:.14em;text-transform:uppercase}
+.cal .mo small{font-size:14px;color:var(--soft);letter-spacing:0;margin-left:6px}
+.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px 0;margin-top:14px;font-size:15px}
+.grid .h{font-size:12px;color:var(--soft)}
+.grid .d{position:relative;line-height:28px;z-index:0}
+.grid .on{color:#fff;font-weight:600}
+.grid .on::before{content:"";position:absolute;left:50%;top:50%;width:30px;height:28px;transform:translate(-50%,-50%);z-index:-1;background:var(--gold);clip-path:path("M15 26C8 20 1 15 1 8.5 1 4.5 4 1.5 8 1.5c3 0 5.5 1.8 7 4.5 1.5-2.7 4-4.5 7-4.5 4 0 7 3 7 7 0 6.5-7 11.5-14 17.5Z")}
+
+/* bands + welcome */
+.band{height:110px;background-size:cover;background-position:center}
+.welcome{font:400 22px/1.45 var(--body);max-width:360px;margin:12px auto 0}
+.vref{font-style:italic;color:var(--soft);font-size:16px;margin-top:8px}
+.portrait{width:min(76%,300px);aspect-ratio:3/4;margin:28px auto 0;border-radius:999px 999px 14px 14px;overflow:hidden;border:1px solid var(--line);padding:7px;background:var(--card2)}
+.portrait img,.portrait .ph{width:100%;height:100%;object-fit:cover;display:grid;border-radius:999px 999px 9px 9px}
+.ph{place-items:center;background:var(--card);color:var(--soft);font:italic 400 16px var(--body)}
+
+/* program */
+.prog{max-width:380px;margin:24px auto 0;text-align:left}
+.day{font:500 12.5px/1.4 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--gold-text);margin:22px 0 10px}
+.item{position:relative;padding:0 0 22px 26px;border-left:1px solid var(--line);margin-left:6px}
+.item::before{content:"";position:absolute;left:-7px;top:2px;width:13px;height:13px;border-radius:50%;background:var(--gold2);box-shadow:0 0 0 3px var(--bg)}
+.item .t{font:500 13px/1 var(--body);letter-spacing:.14em;color:var(--gold-text)}
+.item .n{font:500 21px/1.25 var(--body);margin-top:6px}
+.item .a{font-size:16px;color:var(--soft)}
+.item .link{display:inline-block;margin-top:10px}
+
+/* families + gallery */
+.fam{display:grid;gap:14px;max-width:380px;margin:24px auto 0}
+.fam .c{background:var(--card);border-radius:14px;padding:20px 18px}
+.fam .nm{font:500 22px/1.2 var(--body);margin:6px 0 2px}
+.fam .of{color:var(--soft);font-size:16px}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:400px;margin:22px auto 0}
+.gal img,.gal .ph{width:100%;aspect-ratio:3/4;object-fit:cover;display:grid;border-radius:6px}
+
+/* rsvp + wishes */
+.rs{max-width:360px;margin:0 auto}
+.rs p{color:var(--soft);font-size:17px}
+.form{display:flex;flex-direction:column;gap:14px;text-align:left;margin-top:20px}
+.form label{font:600 11px/1 var(--body);letter-spacing:.22em;text-transform:uppercase;color:var(--soft);display:flex;flex-direction:column;gap:7px}
+.form input,.form select,.form textarea{font:400 17px var(--body);color:var(--ink);background:var(--card2);border:1px solid rgba(171,134,68,.45);border-radius:10px;padding:11px 12px;font-family:inherit}
+.form textarea{resize:vertical;min-height:60px}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.seg button{font:600 11px var(--body);letter-spacing:.18em;text-transform:uppercase;padding:13px 6px;border:1px solid rgba(171,134,68,.5);border-radius:999px;background:transparent;color:var(--ink);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--gold-text);border-color:var(--gold-text);color:#fff}
+.form .pill{width:100%}
+.form .pill:disabled{opacity:.6;cursor:not-allowed}
+.toast{font:italic 400 18px var(--body);color:var(--gold-text);min-height:1.5em;text-align:center}
+.toast.success{color:#3d6935;font-style:normal;font-weight:500}
+.toast.error{color:#a23c3c;font-style:normal}
+.wishes{display:flex;flex-direction:column;gap:12px;max-width:380px;margin:22px auto 0;text-align:left}
+.wish{background:var(--card);border-radius:12px;padding:14px 16px}
+.wish p{margin:0 0 4px;font-size:18px}
+.wish small{font:600 10.5px/1 var(--body);letter-spacing:.2em;color:var(--gold-text);text-transform:uppercase}
+
+/* footer */
+.end{padding-block:54px 48px;text-align:center;background:var(--card)}
+.rv{transition:opacity 1s ease,transform 1s ease}
+.rv.pre{opacity:.001;transform:translateY(16px)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div id="cover" role="button" tabindex="0" aria-label="Open the invitation">
+  <div class="cv">
+    <video id="opener" src="assets/intro.mp4" poster="assets/cover.jpg" muted playsinline preload="auto"></video>
+    <div class="cvTop"><div class="bless" lang="ar">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div></div>
+    <div class="tap">TAP TO OPEN</div>
+  </div>
+</div>
+
+<audio id="bgm" src="reel.mp3" loop preload="auto"></audio>
+<button class="music-toggle" id="musicToggle" type="button" aria-label="Toggle music" title="Toggle music">
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+    <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+  </svg>
+</button>
+
+<main>
+<section class="hero" id="hero">
+  <div class="bless in" lang="ar">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+  <div class="in" style="font-size:13px;letter-spacing:0.14em;color:var(--soft);margin-bottom:12px">In the name of Allah, The Most Gracious and The Most Merciful</div>
+  <div class="cap in">
+    <div>MR. ABDULLAH KUTTY &amp; MRS. JAMEELA ABDULLAH KUTTY</div>
+    <div style="margin-top:10px">CORDIALLY INVITE YOU WITH FAMILY TO GRACE THE AUSPICIOUS OCCASION OF THE WEDDING CEREMONY OF OUR SON</div>
+  </div>
+  <!-- <div class="mono in" aria-hidden="true"><span data-t="brideI"></span><span data-t="groomI"></span></div> -->
+  <div class="names in" style="margin:26px 0 10px"><span data-t="groomFull"></span><em style="margin:4px 0">and</em><span data-t="brideFull"></span></div>
+  <div class="dia in"><i></i><b></b><i></i></div>
+  <div class="cap in" data-t="weekday"></div>
+  <div class="hdate in" data-t="dateLong"></div>
+  <div class="dia in"><i></i><b></b><i></i></div>
+  <div class="cap in" data-t="venueShort"></div>
+  <div class="hline in"><span lang="ar" style="font-family:'Amiri',serif;font-size:1.15em">إن شاء الله</span>, we would love to have you with us</div>
+  <svg class="sprig in" viewBox="0 0 34 52" fill="none" stroke="currentColor" aria-hidden="true"><path d="M1 51V17a16 16 0 0 1 32 0v34z"/><path d="M17 44V13M17 36c-3-1-6-3-7-6 3 0 6 2 7 4m0-2c3-1 6-3 7-6-3 0-6 2-7 4m0-6c-3-1-5-3-6-6 3 0 5 2 6 4m0-2c3-1 5-3 6-6-3 0-5 2-6 4"/></svg>
+  <div class="cap sdown in">Scroll down</div>
+</section>
+
+<section class="sec pad rv" id="countSec">
+  <div class="gcap" id="cdLab">Counting down</div>
+  <div class="count"><div><b id="cd">-</b><span>Days</span></div><div><b id="ch">-</b><span>Hours</span></div><div><b id="cm">-</b><span>Minutes</span></div></div>
+  <div style="margin-top:14px"><a class="link" id="addCal" target="_blank" rel="noopener">Add to calendar</a></div>
+</section>
+
+<section class="sec pad rv" style="padding-top:10px">
+  <div class="gcap">Date</div>
+  <div class="dateBig" data-t="dateTitle"></div>
+  <div class="time" data-t="timeText"></div>
+  <div class="cal" id="calBox" aria-label="Calendar"><div class="mo" id="mo"></div><div class="grid" id="grid"></div></div>
+</section>
+
+<div class="band" style="background-image:url(assets/band-1.jpg)"></div>
+<section class="sec pad rv">
+  <div class="gcap">Welcome</div>
+  <div class="welcome">“And He placed between you affection and mercy.”</div>
+  <div class="vref">Quran 30 : 21</div>
+  <div class="portrait" id="portrait"></div>
+  <p class="welcome" style="font-size:20px;margin-top:24px">Today we celebrate the answer to our deepest duas. We request the honour of your presence, in shaa Allah.</p>
+</section> 
+<div class="band" style="background-image:url(assets/band-2.jpg)"></div>
+
+<section class="sec pad rv">
+  <div class="gcap">The program</div><h2>The Celebration</h2>
+  <div class="prog">
+    <div class="day" data-t="dayLine"></div>
+    <div class="item">
+      <div class="t" data-t="timeText"></div>
+      <div class="n"><span data-t="eventName"></span></div>
+      <div data-t="venue"></div>
+      <div class="a" data-t="address"></div>
+      <a class="link" id="mapLink" target="_blank" rel="noopener">View map →</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec pad rv" style="padding-top:20px">
+  <div class="gcap">Two families</div><h2>With Their Blessings</h2>
+  <div class="fam">
+     <div class="c"><div class="gcap">The groom</div><div class="nm" data-t="groomFull"></div><div data-t="groomParents"></div><div class="of" data-t="groomHome"></div><div class="of" style="margin-top:6px" data-t="groomContact"></div></div>
+    <div class="c"><div class="gcap">The bride</div><div class="nm" data-t="brideFull"></div><div data-t="brideParents"></div><div class="of" data-t="brideHome"></div></div>
+   </div>
+</section>
+
+<section class="sec pad rv">
+  <div class="gcap">Moments</div><h2>A Few Favourites</h2>
+  <div class="gal" id="gal"></div>
+</section>
+
+<div class="band" style="background-image:url(assets/band-1.jpg)"></div>
+<section class="sec pad rv">
+  <div class="rs">
+    <div class="gcap">Join us</div><h2>Will You Celebrate With Us?</h2>
+    <p>We would be honoured to have you join us. Kindly let us know whether you can make it.</p>
+    <form class="form" id="rsvp" novalidate>
+      <label>Your name<input id="rName" autocomplete="name" placeholder="Your full name" required></label>
+      <label>Phone number<input id="rPhone" type="tel" autocomplete="tel" placeholder="Your phone number"></label>
+      <div class="seg" role="group" aria-label="Attending"><button type="button" id="yes" aria-pressed="true">Joyfully yes</button><button type="button" id="no" aria-pressed="false">Sadly no</button></div>
+      <label id="cntWrap">Guests coming<select id="rCount"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select></label>
+      <label>Wishes or note (optional)<textarea id="rNote" rows="2" placeholder="Leave a blessing or note for the couple..."></textarea></label>
+      <button class="pill" id="rSubmit" type="submit">Confirm RSVP</button>
+      <div class="toast" id="toast" role="status"></div>
+    </form>
+  </div>
+</section>
+
+<section class="sec pad rv" style="padding-top:10px">
+  <div class="gcap">Guest book</div><h2>Wishes &amp; Blessings</h2>
+  <div class="wishes">
+    <div class="wish"><p>Wishing you both a lifetime of love and laughter.</p><small>A dear friend</small></div>
+    <div class="wish"><p>May Allah bless your union with barakah and joy.</p><small>Family</small></div>
+  </div>
+</section>
+
+<footer class="end pad">
+  <div class="mono" aria-hidden="true"><span data-t="brideI"></span><span data-t="groomI"></span></div>
+  <div class="names"><span data-t="groomFull"></span><em>and</em><span data-t="brideFull"></span></div>
+  <div class="cap" style="margin-top:10px" data-t="dateLong"></div>
+  <div style="font-style:italic;color:var(--soft);margin-top:10px">Best compliments from: <br> <span data-t="duasFrom"></span></div>
+</footer>
+</main>
+</div>
+
+<script src="config.js"></script>
+<script>
+(()=>{
+const C=window.INVITE,$=s=>document.querySelector(s);
+const T=C.dateTime?new Date(C.dateTime):null;
+/* Format in the event's own timezone, whatever the guest's device is set to. */
+const offset=T?C.dateTime.match(/([+-])(\d\d):(\d\d)$/):null;
+const L=T&&offset?new Date(T.getTime()+(offset[1]==='-'?-1:1)*(+offset[2]*60+ +offset[3])*60000):T;
+const fmt=o=>T?new Intl.DateTimeFormat('en-GB',{timeZone:'UTC',...o}).format(L):'';
+const dateTitle=T?fmt({day:'numeric',month:'long',year:'numeric'}):'[Date]';
+const weekday=T?fmt({weekday:'long'}):'[Day]';
+const data={...C,brideI:C.monogram[0],groomI:C.monogram[1],weekday,dateLong:dateTitle,dateTitle,dayLine:weekday+' · '+dateTitle};
+document.querySelectorAll('[data-t]').forEach(el=>{el.textContent=data[el.dataset.t];});
+
+/* photos */
+const pic=(src,alt)=>{if(src){const i=new Image();i.src=src;i.alt=alt;i.loading='lazy';return i;}
+  const d=document.createElement('div');d.className='ph';d.textContent='Photo';return d;};
+const who=C.groom+' & '+C.bride;
+$('#portrait').append(pic(C.portrait,who));
+for(let i=0;i<4;i++)$('#gal').append(pic(C.gallery[i],who));
+
+/* map */
+if(C.mapUrl)$('#mapLink').href=C.mapUrl;else $('#mapLink').hidden=true;
+
+/* countdown, calendar link, month grid */
+if(T){
+  const tick=()=>{const diff=Math.floor((T-Date.now())/60000);let m=Math.abs(diff);
+    if(diff<0)$('#cdLab').textContent='Happily married · together for';
+    $('#cd').textContent=Math.floor(m/1440);m%=1440;$('#ch').textContent=Math.floor(m/60);$('#cm').textContent=m%60;};
+  tick();setInterval(tick,20000);
+  const g=d=>d.toISOString().replace(/[-:]|\.\d+/g,'');
+  $('#addCal').href='https://calendar.google.com/calendar/render?'+new URLSearchParams({action:'TEMPLATE',text:who+' · '+C.eventName,dates:g(T)+'/'+g(new Date(T.getTime()+4*36e5)),location:C.venue+', '+C.address});
+  const y=L.getUTCFullYear(),mo=L.getUTCMonth(),day=L.getUTCDate();
+  $('#mo').textContent=fmt({month:'long'});
+  const sm=document.createElement('small');sm.textContent=y;$('#mo').append(sm);
+  let h=['S','M','T','W','T','F','S'].map(x=>'<div class="h">'+x+'</div>').join('');
+  const first=new Date(Date.UTC(y,mo,1)).getUTCDay(),len=new Date(Date.UTC(y,mo+1,0)).getUTCDate();
+  for(let i=0;i<first;i++)h+='<div></div>';
+  for(let i=1;i<=len;i++)h+='<div class="d'+(i===day?' on':'')+'">'+i+'</div>';
+  $('#grid').innerHTML=h;
+}else{$('#countSec').hidden=true;$('#calBox').hidden=true;}
+
+/* cover & audio: tap plays the intro, then fades into the hero; reel.mp3 plays after opening */
+const cover=$('#cover'),op=$('#opener'),hero=$('#hero'),bgm=$('#bgm'),musicToggle=$('#musicToggle');
+document.body.style.overflow='hidden';
+let opened=false,done=false,userPaused=false;
+
+const startAudio=()=>{
+  bgm.currentTime=0;
+  bgm.volume=1;
+  const p=bgm.play();
+  if(p&&p.then){
+    p.then(()=>{
+      musicToggle.classList.remove('paused');
+      musicToggle.classList.add('playing');
+      musicToggle.setAttribute('aria-label','Pause music');
+    }).catch(()=>{
+      musicToggle.classList.add('paused');
+      musicToggle.classList.remove('playing');
+      musicToggle.setAttribute('aria-label','Play music');
+    });
+  }
+};
+
+const finish=()=>{
+  if(done)return;
+  done=true;
+  cover.classList.add('gone');
+  document.body.style.overflow='';
+  hero.classList.add('show');
+  if(musicToggle)musicToggle.classList.add('visible');
+  setTimeout(reveal,600);
+};
+
+const openInvite=()=>{
+  if(opened)return finish();
+  opened=true;
+  cover.classList.add('playing');
+  // Start the song from the beginning on the same tap (user gesture unlocks audio)
+  startAudio();
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches)return finish();
+  op.addEventListener('ended',finish,{once:true});
+  op.addEventListener('error',finish,{once:true});
+  setTimeout(finish,12000);
+  const p=op.play();if(p&&p.catch)p.catch(finish);
+};
+cover.addEventListener('click',openInvite);
+cover.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openInvite();}});
+
+if(musicToggle){
+  musicToggle.addEventListener('click',()=>{
+    if(bgm.paused){
+      userPaused=false;
+      bgm.play().then(()=>{
+        musicToggle.classList.remove('paused');
+        musicToggle.classList.add('playing');
+        musicToggle.setAttribute('aria-label','Pause music');
+      }).catch(()=>{});
+    }else{
+      userPaused=true;
+      bgm.pause();
+      musicToggle.classList.add('paused');
+      musicToggle.classList.remove('playing');
+      musicToggle.setAttribute('aria-label','Play music');
+    }
+  });
+}
+
+/* stop audio on browser closing / navigating / tab hidden */
+const stopAudio=()=>{if(!bgm.paused)bgm.pause();};
+window.addEventListener('pagehide',stopAudio);
+window.addEventListener('beforeunload',stopAudio);
+document.addEventListener('visibilitychange',()=>{
+  if(document.hidden){
+    stopAudio();
+  }else if(done&&!userPaused){
+    bgm.play().then(()=>{
+      musicToggle.classList.remove('paused');
+      musicToggle.classList.add('playing');
+    }).catch(()=>{});
+  }
+});
+function reveal(){if(!('IntersectionObserver' in window))return;
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.remove('pre');io.unobserve(e.target);}}),{threshold:.12});
+  document.querySelectorAll('.rv').forEach(el=>{if(el.getBoundingClientRect().top>innerHeight){el.classList.add('pre');io.observe(el);}});}
+
+/* rsvp submission to Google Sheets */
+const yes=$('#yes'),no=$('#no'),toast=$('#toast'),rForm=$('#rsvp'),rSubmit=$('#rSubmit');
+const att=v=>{yes.setAttribute('aria-pressed',v);no.setAttribute('aria-pressed',!v);$('#cntWrap').hidden=!v;};
+yes.onclick=()=>att(true);no.onclick=()=>att(false);
+
+rForm.addEventListener('submit',async e=>{
+  e.preventDefault();
+  const name=$('#rName').value.trim();
+  const phone=$('#rPhone')?$('#rPhone').value.trim():'';
+  const going=yes.getAttribute('aria-pressed')==='true';
+  const count=going?$('#rCount').value:'0';
+  const note=$('#rNote')?$('#rNote').value.trim():'';
+
+  if(!name){
+    toast.className='toast error';
+    toast.textContent='Please enter your name.';
+    $('#rName').focus();
+    return;
+  }
+
+  const scriptUrl=C.rsvpScriptUrl;
+  if(!scriptUrl){
+    if(C.rsvpWhatsApp){
+      const msg=going?`Assalamu alaikum, this is ${name}. In shaa Allah we will attend ${who}'s ${C.eventName}. Guests: ${count}.`
+        :`Assalamu alaikum, this is ${name}. Sadly I won't be able to attend ${who}'s ${C.eventName}. Wishing you both every blessing.`;
+      window.open('https://wa.me/'+C.rsvpWhatsApp+'?text='+encodeURIComponent(msg),'_blank','noopener');
+      toast.className='toast';
+      toast.textContent=`Thank you, ${name}. Please press send in WhatsApp to finish.`;
+      return;
+    }
+    toast.className='toast error';
+    toast.textContent='RSVP configuration pending. Please paste your Google Script Web App URL in config.js.';
+    return;
+  }
+
+  toast.className='toast';
+  toast.textContent='Recording your RSVP...';
+  rSubmit.disabled=true;
+  const originalText=rSubmit.textContent;
+  rSubmit.textContent='Submitting...';
+
+  const formData=new FormData();
+  formData.append('name',name);
+  formData.append('attending',going?'Joyfully yes':'Sadly no');
+  formData.append('guests',count);
+  formData.append('phone',phone);
+  formData.append('note',note);
+  formData.append('timestamp',new Date().toLocaleString('en-IN',{timeZone:'Asia/Kolkata'}));
+
+  try{
+    await fetch(scriptUrl,{
+      method:'POST',
+      body:formData,
+      mode:'no-cors'
+    });
+    toast.className='toast success';
+    toast.textContent=`Thank you, ${name}! Your RSVP has been recorded with love.`;
+    rSubmit.textContent='RSVP Confirmed';
+    rForm.reset();
+    att(true);
+  }catch(err){
+    console.error('RSVP submission error:',err);
+    toast.className='toast error';
+    toast.textContent='Could not submit your RSVP. Please check your connection and try again.';
+    rSubmit.disabled=false;
+    rSubmit.textContent=originalText;
+  }
+});
+})();
+</script>
+</body>
+</html>
